@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktang <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 21:55:14 by ktang             #+#    #+#             */
-/*   Updated: 2022/03/22 21:55:17 by ktang            ###   ########.fr       */
+/*   Updated: 2022/07/18 17:16:27 by ktang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_print_hex(unsigned long n, char c)
 {

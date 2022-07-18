@@ -6,11 +6,11 @@
 #    By: ktang <ktang@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/16 15:17:29 by ktang             #+#    #+#              #
-#    Updated: 2022/07/18 14:21:55 by ktang            ###   ########.fr        #
+#    Updated: 2022/07/18 17:29:09 by ktang            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME = libft.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRCS = ft_atoi.c \

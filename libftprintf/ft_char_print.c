@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_char_print.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktang <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 22:01:34 by ktang             #+#    #+#             */
-/*   Updated: 2022/03/22 21:10:13 by ktang            ###   ########.fr       */
+/*   Updated: 2022/07/18 17:16:27 by ktang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	ft_char_print(char c)
 {

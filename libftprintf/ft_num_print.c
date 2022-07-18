@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_num_print.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ktang <marvin@42.fr>                       +#+  +:+       +#+        */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 22:03:48 by ktang             #+#    #+#             */
-/*   Updated: 2022/03/28 16:07:49 by ktang            ###   ########.fr       */
+/*   Updated: 2022/07/18 17:16:27 by ktang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static void	ft_put_num(size_t n)
 {
