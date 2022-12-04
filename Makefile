@@ -1,8 +1,11 @@
-NAME = pushswap
+NAME = push_swap
 CC = gcc
 CFLAGS = -g -Wall -Wextra -Werror
 LIB = libft/libft.a
-SRCS = test.c
+SRCS = src/main.c \
+		src/check_input.c \
+		src/ft_atoli.c \
+		src/error_m.c
 OBJS = *.o
 
 all: $(NAME)
