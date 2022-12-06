@@ -25,3 +25,9 @@ void    sb(void)
     a_data()->b[i] = a_data()->b[i - 1];
     a_data()->b[i - 1] = temp;
 }
+
+void    ss(void)
+{
+    sa();
+    sb();
+}

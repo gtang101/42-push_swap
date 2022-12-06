@@ -9,15 +9,46 @@ typedef struct s_data
 	int     *b;
 	int     top_a;
 	int     top_b;
-	int     smallest;
+	int     sm;
+	int		hi;
 }   t_data;
 
+enum	e_op
+{
+	PA = 1,
+	PB = 2,
+	RA = 3,
+	RB = 4,
+	RR = 5,
+	RRA = 6,
+	RRB = 7,
+	RRR = 8,
+	SA = 9,
+	SB = 10,
+	SS = 11
+};
+
 t_data		*a_data(void);
-long int	ft_atoli(const char *str);
+void		dup_stack(int *s, int *des, int	size);
 t_bool		within_bound(char *av);
 t_bool		no_dup(int *stack, int size);
-int			error_m(void);
-int			error_n_free(int *s1);
+t_bool		data_set(int ac, char **av);
+
+long int	ft_atoli(const char *str);
+t_bool		error_m(void);
+int			do_free(void);
+void		print_stack(int *stack, int size);
 
 void		sa(void);
+void		sb(void);
+void		ss(void);
+void		pa(void);
+void		pb(void);
+void		ra(void);
+void		rb(void);
+void		rr(void);
+void		rra(void);
+void		rrb(void);
+void		rrr(void);
+void		do_op(int op);
 #endif

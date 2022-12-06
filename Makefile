@@ -5,8 +5,12 @@ LIB = libft/libft.a
 SRCS = src/main.c \
 		src/check_input.c \
 		src/ft_atoli.c \
-		src/error_m.c \
-		src/swap.c
+		src/swap.c \
+		src/push.c \
+		src/rotate.c \
+		src/reverse_rotate.c \
+		src/do_op.c \
+		src/utils.c
 OBJS = *.o
 
 all: $(NAME)

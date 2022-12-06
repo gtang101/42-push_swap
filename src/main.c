@@ -13,14 +13,57 @@ static void	data_init(void)
 	a_data()->b = NULL;
 	a_data()->top_a = -1;
 	a_data()->top_b = -1;
-	a_data()->smallest = 0;
+	a_data()->sm = 0;
+	a_data()->hi = 0;
 }
 
-int	data_set(int ac, char **av)
+void	get_high(void)
+{
+	int	temp;
+	int	i;
+
+	i = 0;
+	temp = a_data()->a[i++];
+	while (i <= a_data()->top_a)
+	{
+		if (temp < a_data()->a[i++])
+		{
+			temp = a_data()->a[i];
+		}
+	}
+	a_data()->hi = temp;
+	printf("highest: %d\n", a_data()->hi);
+}
+
+void	get_small(void)
+{
+	int	temp;
+	int	i;
+
+	i = 0;
+	temp = a_data()->a[i++];
+	printf("i here: %d\n", i);
+	while (i <= a_data()->top_a)
+	{
+		printf("I is: %d\n", i);
+		printf("temp past: %d\n", temp);
+		if (temp > a_data()->a[i++])
+		{
+			temp = a_data()->a[i];
+		}
+		printf("I is: %d\n", i);
+		printf("temp pres: %d\n", temp);
+	}
+	a_data()->sm = temp;
+	printf("smallest: %d\n", a_data()->sm);
+}
+
+t_bool	data_set(int ac, char **av)
 {
 	int		i;
 
 	i = 1;
+	data_init();
 	a_data()->a = malloc(sizeof(int)*(ac - 1));
 	a_data()->b = malloc(sizeof(int)*(ac - 1));
 	while (i != ac)
@@ -31,22 +74,11 @@ int	data_set(int ac, char **av)
 		i++;
 	}
 	if (!no_dup(a_data()->a, (ac - 1)))
-		return(error_n_free(a_data()->a));
+		return(error_m());
 	a_data()->top_a = (ac - 2);
-	return (0);
-}
-
-void	print_stack(int *stack, int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < (size - 1))
-	{
-		ft_printf("%d ", stack[i]);
-		i++;
-	}
-	ft_printf("<= TOP\n");
+	get_small();
+	get_high();
+	return (TRUE);
 }
 
 t_bool	is_sorted(int *s)
@@ -65,17 +97,12 @@ t_bool	is_sorted(int *s)
 
 int main(int ac, char **av)
 {
-	data_init();
-	if (ac > 1)
-		data_set(ac, av);
-	print_stack(a_data()->a, ac);
-	sa();
-	print_stack(a_data()->a, ac);
+	if (ac <= 2)
+		return (0);
+	if (!data_set(ac, av))
+		return (do_free());
 	if (is_sorted(a_data()->a))
 		ft_printf("SORTED!\n");
-	if (a_data()->a)
-		free(a_data()->a);
-	if (a_data()->b)
-		free(a_data()->b);
-	return (0);
+	print_stack(a_data()->a, a_data()->top_a);
+	return (do_free());
 }
