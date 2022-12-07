@@ -1,4 +1,4 @@
-#include "push_Swap.h"
+#include "push_swap.h"
 
 t_data	*a_data(void)
 {
