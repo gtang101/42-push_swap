@@ -31,7 +31,7 @@ void	get_high(void)
 		i++;
 	}
 	a_data()->hi = temp;
-	printf("highest: %d\n", a_data()->hi);
+	// printf("highest: %d\n", a_data()->hi);
 }
 
 void	get_small(void)
@@ -48,7 +48,7 @@ void	get_small(void)
 		i++;
 	}
 	a_data()->sm = temp;
-	printf("smallest: %d\n", a_data()->sm);
+	// printf("smallest: %d\n", a_data()->sm);
 }
 
 t_bool	data_set(int ac, char **av)
