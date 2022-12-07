@@ -10,7 +10,8 @@ SRCS = src/main.c \
 		src/rotate.c \
 		src/reverse_rotate.c \
 		src/do_op.c \
-		src/utils.c
+		src/utils.c \
+		src/data_set.c
 OBJS = *.o
 
 all: $(NAME)

@@ -29,15 +29,18 @@ enum	e_op
 };
 
 t_data		*a_data(void);
+t_bool		data_set(int ac, char **av);
 void		dup_stack(int *s, int *des, int	size);
 t_bool		within_bound(char *av);
 t_bool		no_dup(int *stack, int size);
-t_bool		data_set(int ac, char **av);
+t_bool		is_sorted(int *s);
 
 long int	ft_atoli(const char *str);
 t_bool		error_m(void);
 int			do_free(void);
 void		print_stack(int *stack, int size);
+
+void		do_op(int op);
 
 void		sa(void);
 void		sb(void);
@@ -50,5 +53,4 @@ void		rr(void);
 void		rra(void);
 void		rrb(void);
 void		rrr(void);
-void		do_op(int op);
 #endif

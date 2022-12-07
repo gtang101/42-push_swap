@@ -33,3 +33,18 @@ t_bool  no_dup(int *stack, int size)
     }
     return (TRUE);
 }
+
+t_bool	is_sorted(int *s)
+{
+	int	i;
+
+	i = 0;
+	while (i < a_data()->top_a)
+	{
+		if (!(s[i] > s[i + 1]))
+			return (FALSE);
+		i++;
+	}
+	return (TRUE);
+}
+
