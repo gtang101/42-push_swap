@@ -38,6 +38,7 @@ clean:
 fclean: clean
 
 re: fclean all
+	@clear
 
 git: clean
 	git add .
@@ -46,6 +47,7 @@ git: clean
 
 test2:	re
 		$(eval ARG = $(shell shuf -i 0-100 -n 2))
+		@echo -n "Checker result: "
 		$(CHECKER)
 		@echo -n "Instructions count: "
 		@./push_swap $(ARG) | wc -l
@@ -53,6 +55,7 @@ test2:	re
 
 test3:	re
 		$(eval ARG = $(shell shuf -i 0-100 -n 3))
+		@echo -n "Checker result: "
 		$(CHECKER)
 		@echo -n "Instructions count: "
 		@./push_swap $(ARG) | wc -l
