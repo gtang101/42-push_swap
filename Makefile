@@ -36,3 +36,15 @@ git: clean
 	git add .
 	git commit
 	git push
+
+test2:	re
+		$(eval ARG = $(shell shuf -i 0-100 -n 2))
+		./push_swap $(ARG) | ./checker_Mac $(ARG)
+		@echo -n "Instructions: "
+		@./push_swap $(ARG) | wc -l
+
+test3:	re
+		$(eval ARG = $(shell shuf -i 0-100 -n 3))
+		./push_swap $(ARG) | ./checker_Mac $(ARG)
+		@echo -n "Instructions: "
+		@./push_swap $(ARG) | wc -l

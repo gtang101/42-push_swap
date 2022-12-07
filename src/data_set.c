@@ -32,7 +32,7 @@ void	get_high(void)
 		}
 	}
 	a_data()->hi = temp;
-	printf("highest: %d\n", a_data()->hi);
+	// printf("highest: %d\n", a_data()->hi);
 }
 
 void	get_small(void)
