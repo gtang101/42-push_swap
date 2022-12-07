@@ -1,4 +1,5 @@
 NAME = push_swap
+OS = $(shell uname)
 CC = gcc
 CFLAGS = -g -Wall -Wextra -Werror
 LIB = libft/libft.a
@@ -13,6 +14,12 @@ SRCS = src/main.c \
 		src/utils.c \
 		src/data_set.c
 OBJS = *.o
+
+ifeq ($(OS),Linux)
+CHECKER = ./push_swap $(ARG) | ./checker_linux $(ARG)
+else
+CHECKER = ./push_swap $(ARG) | ./checker_Mac $(ARG)
+endif
 
 all: $(NAME)
 
@@ -39,12 +46,14 @@ git: clean
 
 test2:	re
 		$(eval ARG = $(shell shuf -i 0-100 -n 2))
-		./push_swap $(ARG) | ./checker_Mac $(ARG)
-		@echo -n "Instructions: "
+		$(CHECKER)
+		@echo -n "Instructions count: "
 		@./push_swap $(ARG) | wc -l
+		@./push_swap $(ARG) 
 
 test3:	re
 		$(eval ARG = $(shell shuf -i 0-100 -n 3))
-		./push_swap $(ARG) | ./checker_Mac $(ARG)
-		@echo -n "Instructions: "
+		$(CHECKER)
+		@echo -n "Instructions count: "
 		@./push_swap $(ARG) | wc -l
+		@./push_swap $(ARG) 
