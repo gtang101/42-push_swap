@@ -2,7 +2,7 @@
 
 void	single_arg(void)
 {
-
+	
 }
 
 void	sort_three()
@@ -11,9 +11,9 @@ void	sort_three()
 
 	top = a_data()->top_a;
 	if (a_data()->a[top] == a_data()->hi)
-		do_op(RRA);
-	else if (a_data()->a[top - 1] == a_data()->hi)
 		do_op(RA);
+	else if (a_data()->a[top - 1] == a_data()->hi)
+		do_op(RRA);
 	if (a_data()->a[top] > a_data()->a[top - 1])
 		do_op(SA);
 }
