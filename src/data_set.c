@@ -23,16 +23,15 @@ void	get_high(void)
 	int	i;
 
 	i = 0;
-	temp = a_data()->a[i++];
+	temp = a_data()->a[i];
 	while (i <= a_data()->top_a)
 	{
-		if (temp < a_data()->a[i++])
-		{
+		if (temp < a_data()->a[i])
 			temp = a_data()->a[i];
-		}
+		i++;
 	}
 	a_data()->hi = temp;
-	// printf("highest: %d\n", a_data()->hi);
+	printf("highest: %d\n", a_data()->hi);
 }
 
 void	get_small(void)
@@ -41,16 +40,15 @@ void	get_small(void)
 	int	i;
 
 	i = 0;
-	temp = a_data()->a[i++];
+	temp = a_data()->a[i];
 	while (i <= a_data()->top_a)
 	{
-		if (temp > a_data()->a[i++])
-		{
+		if (temp > a_data()->a[i])
 			temp = a_data()->a[i];
-		}
+		i++;
 	}
 	a_data()->sm = temp;
-	// printf("smallest: %d\n", a_data()->sm);
+	printf("smallest: %d\n", a_data()->sm);
 }
 
 t_bool	data_set(int ac, char **av)
