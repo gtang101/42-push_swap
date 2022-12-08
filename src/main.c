@@ -1,10 +1,5 @@
 #include "push_swap.h"
 
-void	single_arg(void)
-{
-	
-}
-
 void	sort_three()
 {
 	int	top;
@@ -18,12 +13,36 @@ void	sort_three()
 		do_op(SA);
 }
 
+void	sort_five()
+{
+	while (a_data()->top_a != 2)
+	{
+		if (a_data()->a[a_data()->top_a] == a_data()->sm)
+			do_op(PB);
+		else
+			do_op(RRA);
+		get_small();
+	}
+	sort_three();
+	while (a_data()->top_b != -1)
+		do_op(PA);
+}
+
+void	sort_radix(void)
+{
+	return ;
+}
+
 void	push_swap(int size)
 {
 	if (size == 2)
 		do_op(SA);
 	else if (size == 3)
 		sort_three();
+	else if (size <= 5)
+		sort_five();
+	else
+		sort_radix();
 	return ;
 }
 
