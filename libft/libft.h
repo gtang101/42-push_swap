@@ -6,7 +6,7 @@
 /*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 11:59:21 by ktang             #+#    #+#             */
-/*   Updated: 2022/07/18 14:26:15 by ktang            ###   ########.fr       */
+/*   Updated: 2022/12/11 21:05:10 by ktang            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-typedef	enum e_bool
+typedef enum e_bool
 {
 	TRUE = 1,
 	FALSE = 0

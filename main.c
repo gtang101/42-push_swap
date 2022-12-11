@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/11 20:47:24 by ktang             #+#    #+#             */
+/*   Updated: 2022/12/11 21:04:05 by ktang            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "src/push_swap.h"
 
-void	sort_three()
+void	sort_three(void)
 {
 	int	top;
 
@@ -13,7 +25,7 @@ void	sort_three()
 		do_op(SA);
 }
 
-void	sort_five()
+void	sort_five(void)
 {
 	while (a_data()->top_a != 2)
 	{
@@ -41,7 +53,7 @@ void	push_swap(int size)
 	return ;
 }
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (ac < 2)
 		return (0);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_radix.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/11 20:44:11 by ktang             #+#    #+#             */
+/*   Updated: 2022/12/11 20:54:26 by ktang            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int	smol(int cur)
@@ -29,7 +41,7 @@ void	index_stack(void)
 	int	*c;
 
 	i = 1;
-	c = malloc(sizeof(int)*(a_data()->top_a + 1));
+	c = malloc(sizeof(int) * (a_data()->top_a + 1));
 	c[a_data()->low_i] = 0;
 	small = a_data()->sm;
 	while (i <= a_data()->top_a)

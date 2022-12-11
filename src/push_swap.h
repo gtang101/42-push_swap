@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/11 20:49:07 by ktang             #+#    #+#             */
+/*   Updated: 2022/12/11 20:56:26 by ktang            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
@@ -5,14 +17,14 @@
 
 typedef struct s_data
 {
-	int     *a;
-	int     *b;
-	int     top_a;
-	int     top_b;
-	int     sm;
-	int		hi;
-	int		low_i;
-}   t_data;
+	int	*a;
+	int	*b;
+	int	top_a;
+	int	top_b;
+	int	sm;
+	int	hi;
+	int	low_i;
+}	t_data;
 
 enum	e_op
 {
@@ -31,7 +43,7 @@ enum	e_op
 
 t_data		*a_data(void);
 t_bool		data_set(int ac, char **av);
-void		dup_stack(int *s, int *des, int	size);
+void		dup_stack(int *s, int *des, int size);
 t_bool		within_bound(char *av);
 t_bool		no_dup(int *stack, int size);
 t_bool		is_sorted(int *s);

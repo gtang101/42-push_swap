@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   data_set.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ktang <ktang@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/12/11 20:48:54 by ktang             #+#    #+#             */
+/*   Updated: 2022/12/11 21:02:52 by ktang            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_data	*a_data(void)
 {
 	static t_data	data;
 
-	return(&data);
+	return (&data);
 }
 
 static void	data_init(void)
@@ -60,17 +72,17 @@ t_bool	data_set(int ac, char **av)
 
 	i = 1;
 	data_init();
-	a_data()->a = malloc(sizeof(int)*(ac - 1));
-	a_data()->b = malloc(sizeof(int)*(ac - 1));
+	a_data()->a = malloc(sizeof(int) * (ac - 1));
+	a_data()->b = malloc(sizeof(int) * (ac - 1));
 	while (i != ac)
 	{
-		if(!within_bound(av[i]))
+		if (!within_bound(av[i]))
 			return (error_m());
 		a_data()->a[ac - i - 1] = ft_atoi(av[i]);
 		i++;
 	}
 	if (!no_dup(a_data()->a, (ac - 1)))
-		return(error_m());
+		return (error_m());
 	a_data()->top_a = (ac - 2);
 	get_small();
 	get_high();
