@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "src/push_swap.h"
 
 void	sort_three()
 {
@@ -28,20 +28,15 @@ void	sort_five()
 		do_op(PA);
 }
 
-void	sort_radix(void)
-{
-	return ;
-}
-
 void	push_swap(int size)
 {
 	if (size == 2)
 		do_op(SA);
 	else if (size == 3)
 		sort_three();
-	else if (size <= 5)
+	else if (size == 5 || size == 4)
 		sort_five();
-	else
+	else if (size > 5)
 		sort_radix();
 	return ;
 }
@@ -52,11 +47,7 @@ int main(int ac, char **av)
 		return (0);
 	if (!data_set(ac, av))
 		return (do_free());
-	// ft_printf("BEFORE: ");
-	// print_stack(a_data()->a, a_data()->top_a);
 	if (!is_sorted(a_data()->a))
 		push_swap(a_data()->top_a + 1);
-	// ft_printf("AFTER: ");
-	// print_stack(a_data()->a, a_data()->top_a);
 	return (do_free());
 }

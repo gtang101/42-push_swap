@@ -11,6 +11,7 @@ typedef struct s_data
 	int     top_b;
 	int     sm;
 	int		hi;
+	int		low_i;
 }   t_data;
 
 enum	e_op
@@ -41,6 +42,8 @@ long int	ft_atoli(const char *str);
 t_bool		error_m(void);
 int			do_free(void);
 void		print_stack(int *stack, int size);
+void		index_stack(void);
+void		sort_radix(void);
 
 void		do_op(int op);
 

@@ -31,24 +31,27 @@ void	get_high(void)
 		i++;
 	}
 	a_data()->hi = temp;
-	// printf("highest: %d\n", a_data()->hi);
 }
 
 void	get_small(void)
 {
 	int	temp;
 	int	i;
+	int	smol;
 
 	i = 0;
 	temp = a_data()->a[i];
 	while (i <= a_data()->top_a)
 	{
 		if (temp > a_data()->a[i])
+		{
 			temp = a_data()->a[i];
+			smol = i;
+		}
 		i++;
 	}
 	a_data()->sm = temp;
-	// printf("smallest: %d\n", a_data()->sm);
+	a_data()->low_i = smol;
 }
 
 t_bool	data_set(int ac, char **av)
